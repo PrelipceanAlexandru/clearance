@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   include Clearance::User
 
-  validates :username, presence: true
+  validates :name, presence: true
 end
