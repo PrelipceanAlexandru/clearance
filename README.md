@@ -1,24 +1,27 @@
-# README
+https://github.com/thoughtbot/clearance
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+add gem "clearance" in gemfile
+bundle
+rails generate clearance:install
 
-Things you may want to cover:
+You can add new column on User table now.
 
-* Ruby version
+rails db:migrate
 
-* System dependencies
+use rails generate clearance:routes to generate User routes
 
-* Configuration
+scaffold notes
 
-* Database creation
+then add
+  root 'notes#index'
+  resources :notes
 
-* Database initialization
 
-* How to run the test suite
+to generate views for user
 
-* Services (job queues, cache servers, search engines, etc.)
+rails generate clearance:views
+and then you can modify the templates
 
-* Deployment instructions
 
-* ...
+Clearance tutorial
+https://medium.com/@chantaljustamond/how-to-setup-clearance-gem-like-a-boss-c8de9edb7131
