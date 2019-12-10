@@ -1,6 +1,10 @@
 class UsersController < Clearance::UsersController
   before_action :require_login, only: [:index]
 
+  def create
+
+  end
+
   def index
     @users = User.all
   end
